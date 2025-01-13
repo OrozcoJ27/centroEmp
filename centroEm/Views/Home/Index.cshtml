@@ -1,8 +1,39 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<Emprendedor>
+
+@{
+    ViewData["Title"] = "Emprendedores";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Hola mundo</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h1>Emprendedores</h1>
+
+<p>
+    <a href="@Url.Action("Create")" class="btn btn-primary">Crear Nuevo Emprendedor</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Proyecto</th>
+            <th>Fecha de Registro</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.nombre</td>
+                <td>@item.email</td>
+                <td>@item.nombre_proyecto</td>
+                <td>@item.fecha_registro.ToString("yyyy-MM-dd")</td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = item.id_emprendedor })" class="btn btn-warning">Editar</a>
+                    <a href="@Url.Action("Delete", new { id = item.id_emprendedor })" class="btn btn-danger">Eliminar</a>
+                    <a href="@Url.Action("Details", new { id = item.id_emprendedor })" class="btn btn-info">Detalles</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /mnt/f712e5e3-4b5d-4f25-9240-022400a7c1d0/sebas/Programas/centroEmpr/centroEm
 build_property._RazorSourceGeneratorDebug = 
 
+[/mnt/f712e5e3-4b5d-4f25-9240-022400a7c1d0/sebas/Programas/centroEmpr/centroEm/Views/Home/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/mnt/f712e5e3-4b5d-4f25-9240-022400a7c1d0/sebas/Programas/centroEmpr/centroEm/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
