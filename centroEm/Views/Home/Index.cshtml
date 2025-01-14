@@ -1,13 +1,9 @@
 ﻿@model IEnumerable<Emprendedor>
 
-@{
-    ViewData["Title"] = "Emprendedores";
-}
-
-<h1>Emprendedores</h1>
+<h2>Emprendedores</h2>
 
 <p>
-    <a href="@Url.Action("Create")" class="btn btn-primary">Crear Nuevo Emprendedor</a>
+    <a href="@Url.Action("Create", "Home")" class="btn btn-primary">Añadir Emprendedor</a>
 </p>
 
 <table class="table">
@@ -15,23 +11,30 @@
         <tr>
             <th>Nombre</th>
             <th>Email</th>
+            <th>Teléfono</th>
             <th>Proyecto</th>
+            <th>Sector</th>
             <th>Fecha de Registro</th>
             <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var emprendedor in Model)
         {
             <tr>
-                <td>@item.nombre</td>
-                <td>@item.email</td>
-                <td>@item.nombre_proyecto</td>
-                <td>@item.fecha_registro.ToString("yyyy-MM-dd")</td>
+                <td>@emprendedor.nombre</td>
+                <td>@emprendedor.email</td>
+                <td>@emprendedor.telefono</td>
+                <td>@emprendedor.nombre_proyecto</td>
+                <td>@emprendedor.sector</td>
+                <td>@emprendedor.fecha_registro.ToShortDateString()</td>
                 <td>
-                    <a href="@Url.Action("Edit", new { id = item.id_emprendedor })" class="btn btn-warning">Editar</a>
-                    <a href="@Url.Action("Delete", new { id = item.id_emprendedor })" class="btn btn-danger">Eliminar</a>
-                    <a href="@Url.Action("Details", new { id = item.id_emprendedor })" class="btn btn-info">Detalles</a>
+                    <a href="@Url.Action("Edit", "Home", new { id = emprendedor.id_emprendedor })"
+                        class="btn btn-warning">Editar</a>
+                    <a href="@Url.Action("Delete", "Home", new { id = emprendedor.id_emprendedor })"
+                        class="btn btn-danger">Eliminar</a>
+                    <a href="@Url.Action("Evaluar", "Home", new { id = emprendedor.id_emprendedor })"
+                        class="btn btn-success">Evaluar</a>
                 </td>
             </tr>
         }

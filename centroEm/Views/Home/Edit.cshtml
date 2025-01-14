@@ -1,0 +1,48 @@
+@model Emprendedor
+
+<h2>Editar Emprendedor</h2>
+
+<form method="post" action="@Url.Action("Edit", "Home", new { id = Model.id_emprendedor })">
+    @Html.AntiForgeryToken()
+
+    <input type="hidden" name="id_emprendedor" value="@Model.id_emprendedor" />
+
+    <div>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" value="@Model.nombre" />
+    </div>
+
+    <div>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" value="@Model.email" />
+    </div>
+
+    <div>
+        <label for="telefono">Teléfono</label>
+        <input type="text" id="telefono" name="telefono" value="@Model.telefono" />
+    </div>
+
+    <div>
+        <label for="nombre_proyecto">Nombre del Proyecto</label>
+        <input type="text" id="nombre_proyecto" name="nombre_proyecto" value="@Model.nombre_proyecto" />
+    </div>
+
+    <div>
+        <label for="descripcion_proyecto">Descripción del Proyecto</label>
+        <textarea id="descripcion_proyecto" name="descripcion_proyecto">@Model.descripcion_proyecto</textarea>
+    </div>
+
+    <div>
+        <label for="sector">Sector</label>
+        <input type="text" id="sector" name="sector" value="@Model.sector" />
+    </div>
+
+    <div>
+        <label for="fecha_registro">Fecha de Registro</label>
+        <input type="date" id="fecha_registro" name="fecha_registro" value="@Model.fecha_registro.ToString("yyyy-MM-dd")" />
+    </div>
+    <p>@Url.Action("Edit", "Home", new { id = Model.id_emprendedor })</p>
+
+
+    <button type="submit">Guardar Cambios</button>
+</form>

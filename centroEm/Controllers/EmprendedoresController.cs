@@ -4,12 +4,12 @@ using Microsoft.EntityFrameworkCore;
 public class EmprendedoresController : Controller
 {
     private readonly Empcontext _context;
-    
+
     public EmprendedoresController(Empcontext context)
     {
         _context = context;
     }
-
+ 
     // GET: Emprendedores
     public async Task<IActionResult> Index()
     {
@@ -132,8 +132,10 @@ public class EmprendedoresController : Controller
         return RedirectToAction(nameof(Index));
     }
 
+
     private bool EmprendedorExists(int id)
     {
         return _context.Emprendedores.Any(e => e.id_emprendedor == id);
     }
+
 }

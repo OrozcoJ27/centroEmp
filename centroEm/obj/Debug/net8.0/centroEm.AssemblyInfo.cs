@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("centroEm")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2fb6dc98972b240aa4d8d0bcc5392019a4d35ec1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa727c3d48eaa1cf4194139275dcb633d3a4c084")]
 [assembly: System.Reflection.AssemblyProductAttribute("centroEm")]
 [assembly: System.Reflection.AssemblyTitleAttribute("centroEm")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

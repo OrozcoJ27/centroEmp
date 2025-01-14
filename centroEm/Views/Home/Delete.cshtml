@@ -1,0 +1,12 @@
+@model Emprendedor
+
+<h2>Eliminar Emprendedor</h2>
+
+<h3>¿Estás seguro de que deseas eliminar al emprendedor "@Model.nombre"?</h3>
+
+<form method="post" action="@Url.Action("Delete", "Home", new { id = Model.id_emprendedor })">
+    @Html.AntiForgeryToken()
+    <input type="hidden" name="id_emprendedor" value="@Model.id_emprendedor" />
+    <button type="submit">Eliminar</button>
+    <a href="@Url.Action("Index", "Home")">Cancelar</a>
+</form>
